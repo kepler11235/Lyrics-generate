@@ -25,7 +25,7 @@ char_to_idx = dict([(char, i) for i, char in enumerate(idx_to_char)])
 vocab_size = len(char_to_idx)
 # corpus_indices = [char_to_idx[char] for char in corpus_chars]
 
-head = '你说是'
+head = input()
 songs = list(head)
 headvecs = np.array([char_to_idx[h] for h in head])
 outW = np.array([char_to_idx[head[-1]]])

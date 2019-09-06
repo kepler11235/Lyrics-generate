@@ -40,7 +40,7 @@ idx_to_char, _ = zip(*count_pairs)
 char_to_idx = dict([(char, i) for i, char in enumerate(idx_to_char)])
 vocab_size = len(char_to_idx)
 
-head = '你说'
+head = input()
 songs = list(head)
 headvecs = np.array([char_to_idx[h] for h in head])
 outW = np.expand_dims(np.array([char_to_idx[head[-1]]]), axis=0)
