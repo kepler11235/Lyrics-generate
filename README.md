@@ -1,1 +1,3 @@
 # Lyrics-generate
+zip文件是歌词的数据集，char_RNN是训练模型的代码，另外的两份代码用于歌词生成，其中beam_search采用了集束搜索来改善生成质量。
+模型采用了三层的GRU，优化器是Adam，还加入了dropout机制和梯度裁剪来提高效果
