@@ -6,7 +6,7 @@ import os, re
 import collections
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 num_unroll = 32
 batch_size = 32
 emb_size = 512

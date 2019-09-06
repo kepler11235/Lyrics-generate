@@ -4,7 +4,7 @@ import tensorflow as tf
 import os, collections, re
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 num_unroll = 120
 emb_size = 512
 layers = [600, 700, 800]
