@@ -4,7 +4,7 @@ import tensorflow as tf
 import os, collections, re
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 num_unroll = 120
 emb_size = 512
 layers = [600, 700, 800]
@@ -64,6 +64,7 @@ hidden = a_hidden[-1]
 W = tf.Variable(tf.random_normal([layers[-1], vocab_size], stddev=0.1, dtype=tf.float32))
 b = tf.Variable(tf.random_normal([vocab_size], stddev=0.1, dtype=tf.float32))
 logit = tf.matmul(hidden, W) + b
+logit = tf.nn.log_softmax(logit)
 
 init = tf.global_variables_initializer()
 with tf.Session(config=tf.ConfigProto(log_device_placement=True)) as sess:
